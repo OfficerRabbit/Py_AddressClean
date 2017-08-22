@@ -37,7 +37,7 @@ def search():
 	url = "https://maps.googleapis.com/maps/api/place/autocomplete"
 	data_type = "/json"
 	input_type = "?input=" + city
-	#search_type = "types=(cities)"
+	# search_type = "types=(cities)" # This can specify whether we're looking at a city, zip, or general search
 
 	API_URL = url + data_type + input_type + "&"  + "&key=" + API_Key # + search_type
 
@@ -45,10 +45,6 @@ def search():
 
 	r_json = r.json()
 
-	#pprint.pprint(r_json)
-
-	#for city_name in r_json['predictions'][0]:
-	#	print(city_name)
 	try:
 		print("\n")
 		print("\t" + r_json['predictions'][0]['description'])
