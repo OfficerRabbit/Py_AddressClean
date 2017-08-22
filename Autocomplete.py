@@ -35,9 +35,9 @@ def search():
 	url = "https://maps.googleapis.com/maps/api/place/autocomplete"
 	data_type = "/json"
 	input_type = "?input=" + city
-	search_type = "types=(cities)"
+	#search_type = "types=(cities)"
 
-	API_URL = url + data_type + input_type + "&" + search_type + "&key=" + API_Key
+	API_URL = url + data_type + input_type + "&"  + "&key=" + API_Key # + search_type
 
 	r = requests.get(API_URL)
 
