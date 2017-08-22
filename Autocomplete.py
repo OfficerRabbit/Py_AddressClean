@@ -20,7 +20,9 @@ def again():
 				if again == "Y":
 					search()
 				elif again == "N":
-					return
+					print("Thank you for using Google Autocomplete by Fletcher!")
+					exit()
+					
 		
 
 def search():
@@ -69,4 +71,3 @@ print("""
 """)
 
 search()
-print("Thank you for using Google Autocomplete by Fletcher!")
